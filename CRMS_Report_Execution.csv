@@ -1,0 +1,164 @@
+Issue Type *,Sprint ID,Component/s *,TC Category *,Link User Story No.*,Summary *,Test Steps *,Expected Test Results *,Reporter
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Cashflow Report as per RMS,"1. Navigate to Report Creation 
+2. Drag columns in se-Po Number,Order Name, Supplier, Supplier Location, PO currency, Net Order Amount, Invoice No, Settlement Via, Invoice Amount, Charged Amount, Amount Paid, Amount due for Payment",Cashflow Report should get crated in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if cashflow report is getting summarized on Company, Bunisness Unit and Location","1. Navigate to Report Creation >>Summarize report on Company, Bunisness Unit and Location>> save the report
+",Report should get summarized on CBL,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if cashflow report has the filter where po status = Partially Invoiced or Fully Invoiced, Type= Standard or Release and Invoice status=approved or closed","1. Navigate to Report Creation
+4. Set filters- po status = Partially Invoiced or Fully Invoiced, Type= Standard or Release and Invoice status=approved or closed",Cashflow Report should retain such filters,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if cashflow report can be summarize over sum of record count and Invoice amount,"1. Navigate to Report creation
+2. Drag columns as per the seq defined in RMS
+4. Summarize over  sum of record count and Invoice amount",User should be able to Summarize over  sum of record count and Invoice amount,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Cycle time report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in seq-Po number, line no, po released on,  item name, category, requisition number, approved on, requisition approval time(hrs), order time(hrs), po release time(hrs)",Cycle Time Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if cycle time report is getting summarized on Company, Bunisness Unit and Location","1. Navigate to Report Creation >>Summarize report on Company, Bunisness Unit and Location>> save the report
+",Report should get summarized on CBL,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if cycle time report has the filter where po status is as per RMS and  Type= Standard or Release,"1. Navigate to Report Creation
+2. Set filters- po status = Released, Confirmed, Closed,Patially Received, Received, Partially Invoiced, Invoiced and Expired, Type= Standard or Release ",Cycle Time Report should retain such filters,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if cycle time report can be summarized over sum of the record count and maximum value of Requisition approval time(hrs),"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count and maximum value of Requisition approval time(hrs)",User should be able to Summarize over sum of the record count and maximum value of Requisition approval time(hrs),pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Duration of Delivery report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in seq-Supplier, Po-number, Supplier-Location, Item Name, Category, Delivery Terms, Ordered Qty, Received Qty(Approved), Duration of Delivery",Duration of Delivery Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Duration of Delivery report is getting summarized on Company and Location,"1. Navigate to Report Creation >>Summarize report on Company and Location>> save the report
+",Report should get summarized on CL,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Duration of Delivery report has the filter where po status is Closed and  Type= Standard or Release and Receipt number is not equal to N/A,"1. Navigate to Report Creation
+2. Set filters-po status is Closed and  Type= Standard or Release and Receipt number is not equal to N/A",Duration of Delivery Report should retain such filters,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if  Duration of Delivery report can be summarized over sum of the record count ,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count ",User should be able to summarized over sum of the record count ,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create fulfillment rate report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in seq-Supplier, Po-number, Supplier-Location, Item Name, Category, Delivery Terms, Ordered Qty, Received qty(Total), Received Qty(Approved), Open PO qty, Rate",Fulfillment Rate  Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Fulfillment Rate report is getting summarized on Company and Location,"1. Navigate to Report Creation >>Summarize report on Company and Location>> save the report
+",Report should get summarized on CL,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Fulfillment rate report has the filter where po receipt number is not N/A and Po item gross received Qty >0  and  Type= Standard or Release and Receipt number is not equal to N/A,"1. Navigate to Report Creation
+2. Set filters-where po receipt number is not N/A and Po item gross received Qty >0  and  Type= Standard or Release and Receipt number is not equal to N/A",Fulfillment Rate Report should retain such filters,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if  Fulfillment Rate  report can be summarized over sum of the record count ,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count ",User should be able to summarized over sum of the record count ,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Object Code summary report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in Po number, Order Name, Line no, Item name, Supplier Location, Object Code",Object Code summary  Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Object code summary report is getting summarized on Company and Object Code Type,"1. Navigate to Report Creation >>Summarize report on Company and Object Code Type>> save the report
+",Report should get summarized on Company and Object Code Type,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Object Code summary report has the filter where po status = released and closed and  Type= Standard or Release ,"1. Navigate to Report Creation
+2. Set filters-where po status = released and closed and  Type= Standard or Release ",Object Code summary Report should retain such filters,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if  Object Code summary  report can be summarized over sum of the record count and amount assigned,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count and amount assigned",User should be able to summarized over sum of the record count and amount assigned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Order value Deviation report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns  Po number, Supplier Location, Net Order amount, Approved Invoice amount, Deviation and %Deviation",Order value Deviation  Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Order value Deviation report is getting summarized on Company ,"1. Navigate to Report Creation >>Summarize report on Company >> save the report
+",Report should get summarized on Company ,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Order value Deviation report has the filter where PO TOTAL_INVOICE_AMOUNT > PO.TOTAL_AMOUNT and  Type= Standard or Release and payment method =Invoice,"1. Navigate to Report Creation
+2. Set filters-where PO TOTAL_INVOICE_AMOUNT > PO.TOTAL_AMOUNT and  Type= Standard or Release and payment method =Invoice",Duration of Delivery Report should retain such filters,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if  Order value Deviation  report can be summarized over sum of the record count and % deviation and maximum value of % deviation,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count and % deviation and maximum value of % deviation",User should be able to summarized over sum of the record count and % deviation and maximum value of % deviation,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Payment Term Analysis report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns  Po number, Supplier, Supplier Location, Approved Invoice Amount",Payment Term Analysis Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Payment Term Analysis report is getting summarized on Payment Terms,"1. Navigate to Report Creation >>Summarize report on Payment Terms >> save the report
+",Report should get summarized on Payment Terms ,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Payment Terms report has the filter where PO.TOTAL_INVOICE_AMOUNT > 0 AND PAYMENT_METHOD != P-CARD and  Type= Standard or Release and payment method =Invoice,"1. Navigate to Report Creation
+2. Set filters-where PO TOTAL_INVOICE_AMOUNT > PO.TOTAL_AMOUNT and  Type= Standard or Release and payment method =Invoice",Payment Term Analysis report should retain such filters,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if  Payment Terms  report can be summarized over sum of the record count and approved invoiced amount,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count and approved invoiced amount",User should be able to summarized over sum of the record count and approved invoiced amount,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create PO Line level Details report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns  Po number, Po released on, Order name, Line-no, Item Name, Category, Cost center, Object Code",PO Line level Details  Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,"Verify if user is able to create PO Line level Details report  is getting summarized on Company, Business Unit and Location","1. Navigate to Report Creation 
+2. Summarize report on Company, Business Unit and Location","PO Line level Details Report should get summarized on Company, Business Unit and Location",pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if PO line level Details  report has the filter where Po status= Released and closed and  Type= Standard or Release ,"1. Navigate to Report Creation
+2. Set filters-where where Po status= Released and closed and  Type= Standard or Release ",PO Line level Details report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Po line level Details report is getting summarized over sum of the record count,"1. Navigate to Report Creation >>Summarize over sum of the record count >> save the report
+",Report should get summarized over sum of the record count,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Purchase Order Status report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns Po  Type, Po number, Supplier Location, Order Name, Po currency, Net Order amount",Purchase Order Status  Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,"Verify if user is able to create Purchase Order Status report  is getting summarized on Company, Business Unit and Status","1. Navigate to Report Creation 
+2. Summarize report on Company, Business Unit and Status","PO Line level Details Report should get summarized on Company, Business Unit and Status",pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Purchase Order Status report is getting summarized over sum of the record count,"1. Navigate to Report Creation >>Summarize over sum of the record count >> save the report
+",Report should get summarized over sum of the record count,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Reject Levels report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns Po  Number, Supplier, Supplier Location, Item Name, Category, Ordered Qty, Receive Qty(Total), Received Qty(Approved), Rejected Qty",Reject Levels Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Reject Levels report  is getting summarized on Company,"1. Navigate to Report Creation 
+2. Summarize report on Company",Reject Levels Report should get summarized on Company,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Reject Levels  report has the filter where Receive Qty(Total)> Received qty(approved)and  Type= Standard or Release ,"1. Navigate to Report Creation
+2. Set filters-where where Po status= Released and closed and  Type= Standard or Release ",PO Line level Details report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Reject Levels report is getting summarized over sum of the record count,"1. Navigate to Report Creation >>Summarize over sum of the record count >> save the report
+",Report should get summarized over sum of the record count,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Requisition Line level report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns Requester, Requisistion Number, Requisition name, Item Name, Category, Approved on, Cost center, Amount",Requsition Line level Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,"Verify if user is able to create Requisition Line Level Details report  is getting summarized on Company, Business Unit and Location","1. Navigate to Report Creation 
+2. Summarize report on  Company, Business Unit and Location","Requsition Line level Report should get summarized on  Company, Business Unit and Location",pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Requisition  Line Level report has the filter where status= APPROVED,CLOSED, PARKED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= APPROVED,CLOSED, PARKED, RELEASED, REOPENED ",Requistion Line level Details report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Requisition line level report is getting summarized over sum of the record count,"1. Navigate to Report Creation >>Summarize over sum of the record count >> save the report
+",Report should get summarized over sum of the record count,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Requisition Status Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns Requester, Requisistion Number, Requisition name, Requested Amount and Approved Amount",Requsition Status Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Requisition Status Report  is getting summarized on Company and Status,"1. Navigate to Report Creation 
+2. Summarize report on  Company and Status",Requsition Status Report should get summarized on  Company and Status,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Requisition Status report is getting summarized over sum of the record count, Requested Amount and Approved Amount","1. Navigate to Report Creation >>Summarize over  sum of record count, Requested Amount and Approved Amount >> save the report
+","Report should get summarized over sum of record count, Requested Amount and Approved Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Buyer Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns PO number, Order name, Supplier Location, Business Unit, Net Order Amount",Spend By Buyer Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Buyer Report  is getting summarized on Company and Buyer,"1. Navigate to Report Creation 
+2. Summarize report on  Company and Buyer",Requsition Status Report should get summarized on  Company and Buyer,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Buyer report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Requistion Status Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Requisition Status report is getting summarized over sum of the record count, Net Order Amount","1. Navigate to Report Creation >>Summarize over  sum of the record count, Net Order Amount
+","Report should get summarized over sum of the record count, Net Order Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Category Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns PO number, Supplier Location, Order Name, Item Name,  Line Item Amount",Spend By Category Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Category Report  is getting summarized on Aggregate Category and Category,"1. Navigate to Report Creation 
+2. Summarize report on  Aggregate Category and Category",Spend By Category Report should get summarized on  Aggregate Category and Category,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Category report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Spend By Category Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Category report is getting summarized over sum of the record count, Line Item Amount","1. Navigate to Report Creation >>Summarize over  sum of the record count, Line Item Amount
+","Report should get summarized over sum of the record count, Line Item Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Company Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns PO number, Order Name,  Location, Net Order Amount, Supplier Location",Spend By Company Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Company Report  is getting summarized on Company and Business Unit,"1. Navigate to Report Creation 
+2. Summarize report on  Company and Business Unit",Spend By Company Report should get summarized on Company and Business Unit,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Company report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Spend By Company Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Category report is getting summarized over sum of the record count, Net Order Amount","1. Navigate to Report Creation >>Summarize over sum of the record count, Net Order Amount
+","Report should get summarized over sum of the record count, Net Order Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Cost Center Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns PO number, Order Name, Supplier Location, Amount",Spend By Cost Center Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Cost Center Report  is getting summarized on Company and Cost Center Unit,"1. Navigate to Report Creation 
+2. Summarize report on  Company and Cost Center",Spend By Cost Center Report should get summarized on Company and Cost center,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Cost Center report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Spend By Cost Center Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Cost Center report is getting summarized over sum of the record count, Amount","1. Navigate to Report Creation >>Summarize over sum of the record count, Amount
+","Report should get summarized over sum of the record count, Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Period Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns PO number, Supplier Location, Order Name, Quarter of Release, Net Order Amount",Spend By Period Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Period Report  is getting summarized on Company and Year of Release,"1. Navigate to Report Creation 
+2. Summarize report on  Company and Year of Release",Spend By Cost Center Report should get summarized on Company and Year of Release,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Period report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Spend By Period Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Period report is getting summarized over sum of the record count, Net Order Amount","1. Navigate to Report Creation >>Summarize over sum of the record count, Net Order Amount
+","Report should get summarized over sum of the record count, Net Order Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Preferred Vs Non-Preferred Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns PO number, Order Name, Category, Supplier Location, Net Order Amount",Spend By Preferred Vs non-Preferred Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Preferred Vs Non-Preferred Report  is getting summarized on Supplier Type and Supplier,"1. Navigate to Report Creation 
+2. Summarize report on  Supplier Type and Supplier",Spend By Preferred Vs non-Preferred Report should get summarized on Supplier Type and Supplier,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Preferred Vs Non-Preferred report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Spend By Preferred Vs Non-Preferred Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Preferred Vs Non-Preferred report is getting summarized over sum of the record count, Net Order Amount","1. Navigate to Report Creation >>Summarize over sum of the record count, Net Order Amount
+","Report should get summarized over sum of the record count, Net Order Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Requester Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns Requsistion Number, Requisition Name, Approved Amount",Spend By Requester Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Requester Report  is getting summarized on Company and Requester,"1. Navigate to Report Creation 
+2. Summarize report on  Company and Requester",Spend By Requester Report should get summarized on Company and Requester,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Requester report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Spend By Requester Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Requester report is getting summarized over sum of the record count, Net Order Amount","1. Navigate to Report Creation >>Summarize over sum of the record count, Net Order Amount
+","Report should get summarized over sum of the record count, Net Order Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Source of Items Report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns Po Number, Supplier Location, Item Name, Line Item Amount",Spend By Source Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Spend By Source Report  is getting summarized on Source Type and Aggregate Category,"1. Navigate to Report Creation 
+2. Summarize report on  Source Type and Aggregate Category",Spend By Source Report should get summarized on Source Type and Aggregate Category,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Source report has the filter where status= CLOSED, RELEASED, REOPENED ","1. Navigate to Report Creation
+2. Set filters-where  status= CLOSED, RELEASED, REOPENED ",Spend By Source Report should retain such filters,pranjali.telawane
+Test ,,Reports,Functional,PM-4207,"Verify if Spend By Source report is getting summarized over sum of the record count, Line Item Amount","1. Navigate to Report Creation >>Summarize over sum of the record count, Line Item Amount
+","Report should get summarized over sum of the record count, Line Item Amount",pranjali.telawane
+Test,,Reports,Functional,PM-4207,Verify if user is able to create Unreceived Orders Report  with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns Po number, supplier, po delivery date, supplier location",Unreceived Orders Report should get created in the sequence of the columns as mentioned,pranjali.telawane
+Test,,Reports,Functional,PM-4207,"Verify if user is able to create Unreceived Orders Report  is getting summarized on Company, Business Unit, Location","1. Navigate to Report Creation 
+2. Summarize report on  ompany, Business Unit, Location","Spend By Source Report should get summarized on ompany, Business Unit, Location",pranjali.telawane
+Test ,,Reports,Functional,PM-4207,Verify if Unreceived Orders Report has the filter where Receipt Number is not equal to NA and it should not be completely received,"1. Navigate to Report Creation
+2. Set filters-where Receipt Number is not equal to NA and it should not be completely received",Unreceived Orders Report should retain such filters,pranjali.telawane
