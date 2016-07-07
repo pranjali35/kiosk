@@ -1,0 +1,34 @@
+Issue Type *,Sprint ID,Component/s *,TC Category *,Link User Story No.*,Summary *,Test Steps *,Expected Test Results *,Reporter
+Test,,Customize,Functional,PM-4207,"Verify if user is able to create Cashflow Report by arranging columns in following order-Po Number,Order Name, Supplier, Supplier Location, PO currency, Net Order Amount, Invoice No, Settlement Via, Invoice Amount, Charged Amount, Amount Paid, Amount due for Payment",1. Navigate to Report Creation >>Summarize the report on ,Cashflow Report should get crated in the sequence of the columns as mentioned,pranjali.telawane
+Test ,,Customize,Functional,PM-4207,"Verify if report is getting summarized on Company, Bunisness Unit and Location","1. Navigate to Report Creation >>Summarize report on Company, Bunisness Unit and Location>> save the report
+",Report should get summarized on CBL,pranjali.telawane
+Test ,,Requisition,Functional,PM-4207,"Verify if cashflow report has the filter where po status = Partially Invoiced or Fully Invoiced, Type= Standard or Release and Invoice status=approved or closed","1. Navigate to Setup>>
+4. Add any item to cart and click on checkout.",User should be allowed to Enter supplier comments and data should be retained throughout the life-cycle of Requisition.,pranjali.telawane
+Test,,Requisition,Functional,PM-4207,,"1. Navigate to Report creation
+2. Drag columns as per the seq defined in RMS
+4. Add filter for po status = Partially Invoiced or Fully Invoiced, Type= Standard or Release and Invoice status=approved or closed",User should not be allowed to Enter supplier comments.,pranjali.telawane
+Test,,Requisition,Functional,PM-4207,,"1. Navigate to Setup>>Customize>> Requisition.
+2. Set ""Allow requesters to add comments for supplier at header level"" to YES.
+3. Open any draft Requisition/ RFA / Copy Requisition.",User should be allowed to Enter supplier comments and data should be retained throughout the life-cycle of Requisition.,pranjali.telawane
+Test ,,Requisition,Functional,PM-4207,,"1. Navigate to Setup>>Customize>> Requisition.
+2. Set ""Allow requesters to add comments for supplier at header level"" to NO.
+3. Open any draft Requisition/ RFA / Copy Requisition.",User should not be allowed to Enter supplier comments and data should be retained throughout the life-cycle of Requisition.,pranjali.telawane
+Test ,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test ,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,
+Test,,Requisition,Functional,PM-4207,,,,

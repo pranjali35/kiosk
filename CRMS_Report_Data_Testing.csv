@@ -1,0 +1,127 @@
+Issue Type *,Sprint ID,Component/s *,TC Category *,Link User Story No.*,Summary *,Test Steps *,Expected Test Results *,Reporter
+Test,,Reports,Functional,PM-6325,Verify if Requisition Status Report,"1. Navigate to Report Creation 
+2. Drag columns in se-Po Number,Order Name, Supplier, Supplier Location, PO currency, Net Order Amount, Invoice No, Settlement Via, Invoice Amount, Charged Amount, Amount Paid, Amount due for Payment",Cashflow Report should get crated in the sequence of the columns as mentioned,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,"Verify if cashflow report is getting summarized on Company, Bunisness Unit and Location","1. Navigate to Report Creation >>Summarize report on Company, Bunisness Unit and Location>> save the report
+",Report should get summarized on CBL,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,"Verify if cashflow report has the filter where po status = Partially Invoiced or Fully Invoiced, Type= Standard or Release and Invoice status=approved or closed","1. Navigate to Report Creation
+4. Set filters- po status = Partially Invoiced or Fully Invoiced, Type= Standard or Release and Invoice status=approved or closed",Cashflow Report should retain such filters,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if cashflow report can be summarize over sum of record count and Invoice amount,"1. Navigate to Report creation
+2. Drag columns as per the seq defined in RMS
+4. Summarize over  sum of record count and Invoice amount",User should be able to Summarize over  sum of record count and Invoice amount,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if user is able to create Cycle time report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in seq-Po number, line no, po released on,  item name, category, requisition number, approved on, requisition approval time(hrs), order time(hrs), po release time(hrs)",Cycle Time Report should get created in the sequence of the columns as mentioned,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,"Verify if cycle time report is getting summarized on Company, Bunisness Unit and Location","1. Navigate to Report Creation >>Summarize report on Company, Bunisness Unit and Location>> save the report
+",Report should get summarized on CBL,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,Verify if cycle time report has the filter where po status is as per RMS and  Type= Standard or Release,"1. Navigate to Report Creation
+2. Set filters- po status = Released, Confirmed, Closed,Patially Received, Received, Partially Invoiced, Invoiced and Expired, Type= Standard or Release ",Cycle Time Report should retain such filters,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if cycle time report can be summarized over sum of the record count and maximum value of Requisition approval time(hrs),"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count and maximum value of Requisition approval time(hrs)",User should be able to Summarize over sum of the record count and maximum value of Requisition approval time(hrs),pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if user is able to create Duration of Delivery report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in seq-Supplier, Po-number, Supplier-Location, Item Name, Category, Delivery Terms, Ordered Qty, Received Qty(Approved), Duration of Delivery",Duration of Delivery Report should get created in the sequence of the columns as mentioned,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,Verify if Duration of Delivery report is getting summarized on Company and Location,"1. Navigate to Report Creation >>Summarize report on Company and Location>> save the report
+",Report should get summarized on CL,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,Verify if Duration of Delivery report has the filter where po status is Closed and  Type= Standard or Release and Receipt number is not equal to N/A,"1. Navigate to Report Creation
+2. Set filters-po status is Closed and  Type= Standard or Release and Receipt number is not equal to N/A",Duration of Delivery Report should retain such filters,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if  Duration of Delivery report can be summarized over sum of the record count ,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count ",User should be able to summarized over sum of the record count ,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if user is able to create fulfillment rate report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in seq-Supplier, Po-number, Supplier-Location, Item Name, Category, Delivery Terms, Ordered Qty, Received qty(Total), Received Qty(Approved), Open PO qty, Rate",Fulfillment Rate  Report should get created in the sequence of the columns as mentioned,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,Verify if Fulfillment Rate report is getting summarized on Company and Location,"1. Navigate to Report Creation >>Summarize report on Company and Location>> save the report
+",Report should get summarized on CL,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,Verify if Fulfillment rate report has the filter where po receipt number is not N/A and Po item gross received Qty >0  and  Type= Standard or Release and Receipt number is not equal to N/A,"1. Navigate to Report Creation
+2. Set filters-where po receipt number is not N/A and Po item gross received Qty >0  and  Type= Standard or Release and Receipt number is not equal to N/A",Fulfillment Rate Report should retain such filters,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if  Fulfillment Rate  report can be summarized over sum of the record count ,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count ",User should be able to summarized over sum of the record count ,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if user is able to create Object Code summary report with the sequence of columns as mentioned in RMS,"1. Navigate to Report Creation 
+2. Drag columns in Po number, Order Name, Line no, Item name, Supplier Location, Object Code",Object Code summary  Report should get created in the sequence of the columns as mentioned,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,Verify if Object code summary report is getting summarized on Company and Object Code Type,"1. Navigate to Report Creation >>Summarize report on Company and Object Code Type>> save the report
+",Report should get summarized on Company and Object Code Type,pranjali.telawane@zycus.com
+Test ,,Reports,Functional,PM-6325,Verify if Object Code summary report has the filter where po status = released and closed and  Type= Standard or Release ,"1. Navigate to Report Creation
+2. Set filters-where po status = released and closed and  Type= Standard or Release ",Object Code summary Report should retain such filters,pranjali.telawane@zycus.com
+Test,,Reports,Functional,PM-6325,Verify if  Object Code summary  report can be summarized over sum of the record count and amount assigned,"1. Navigate to Report Creation
+2. Verify if report can be summarized over sum of the record count and amount assigned",User should be able to summarized over sum of the record count and amount assigned,pranjali.telawane@zycus.com
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
