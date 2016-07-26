@@ -1,0 +1,185 @@
+SELENIUM PRACTICE:
+public class Test {
+	int a = 1, b = 2;
+
+	public void add() {
+		int sum = a + b;
+		int diff = a - b;
+		System.out.println("sum:"  + sum  +  "diff:"  + diff);
+//		System.out.println("diff:"  + diff );
+
+	}
+
+	public static void main(String[] args) {
+
+		Test t = new Test();
+		t.add();
+	}
+}
+=====================================================================
+CatalogItem.java
+
+
+/**
+ * 
+ */
+package com.zycus.training.collections;
+
+/**
+ * @author ankita.sawant
+ * 
+ */
+public class CatalogItem {
+
+	String itemName;
+	int quantity;
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+}
+=====================================================================
+Items.java
+
+
+package com.zycus.training.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Items {
+	public List<CatalogItem> catalogItems = new ArrayList<>();
+
+	public List<CatalogItem> getCatalogItems() {
+		return catalogItems;
+	}
+
+	public void setCatalogItems(List<CatalogItem> catalogItems) {
+		this.catalogItems = catalogItems;
+	}
+
+}
+
+=====================================================================
+TestCollections.java
+
+
+/**
+ * 
+ */
+package com.zycus.training.collections;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.collections.map.HashedMap;
+
+/**
+ * @author ankita.sawant
+ * 
+ */
+public class TestCollections {
+	public static void main(String[] args) {
+
+		// to create list
+		List<String> list = new ArrayList<>();
+
+		// add elements in list
+		list.add("B");
+		list.add("D");
+		list.add("A");
+		list.add("C");
+
+		// print size of list
+		System.out.println("Size : " + list.size());
+
+		// to remove element from list
+		list.remove("B");
+		System.out.println("Size after removing element : " + list.size());
+
+		// iterator for collection
+		Iterator iterator = list.iterator();
+		while (iterator.hasNext()) {
+			String var = iterator.next().toString();
+			System.out.println(var);
+			if (var.equalsIgnoreCase("A")) {
+				System.out.println("Search successful");
+				break;
+			}
+		}
+		System.out.println("Exit");
+
+		// arraylist : can contain values of any datatype
+		ArrayList list2 = new ArrayList<>();
+		list2.add(2);
+		list2.add("A");
+		list2.add(5.02);
+
+		// to create linked list
+		LinkedList<String> list3 = new LinkedList<>();
+
+		// to create hash map
+		Map<String, String> map = new HashedMap();
+		// to add values in map
+		map.put("Req Name", "REQ_456");
+		map.put("Buyer Name", "ABC");
+		map.put("Settlement Via", "Invoice");
+
+		// to get value from map
+		System.out.println(map.get("Buyer Name"));
+
+		// to print all values of map
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
+
+		// linked hash map
+		LinkedHashMap<String, Integer> map2 = new LinkedHashMap<>();
+		map2.put("First", 1);
+		map2.put("Second", 2);
+		map2.put("Third", 3);
+
+		System.out.println(map2.get("Second"));
+		for (Map.Entry<String, Integer> entry : map2.entrySet()) {
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
+
+		// to create object of catalog item : laptop
+		CatalogItem catalogItem = new CatalogItem();
+		catalogItem.setItemName("Laptop");
+		catalogItem.setQuantity(5);
+
+		// to create object of catalog item : Mobile
+		CatalogItem catalogItem2 = new CatalogItem();
+		catalogItem2.setItemName("Mobile");
+		catalogItem2.setQuantity(10);
+
+		// map of catalog items
+		Map<String, CatalogItem> map3 = new HashedMap();
+		map3.put("Laptop", catalogItem);
+		map3.put("Mobile", catalogItem2);
+
+		// list of catalog items
+		List<CatalogItem> catalogItems = new ArrayList<>();
+		catalogItems.add(catalogItem);
+		catalogItems.add(catalogItem2);
+	}
+
+}

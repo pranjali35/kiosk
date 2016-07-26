@@ -1,0 +1,557 @@
+AbsAccount 
+
+package com.zycus.training.absoluteclass;
+
+abstract public class AbsAccount {
+	
+	double balance =0;
+	abstract public double withdraw(double amount);
+
+}
+====================================================
+AbsAccount
+/**
+ * 
+ */
+package com.zycus.training.absoluteclass;
+
+/**
+ * @author ankita.sawant
+ *
+ */
+public class AbsSaving extends AbsAccount{
+
+	
+	@Override
+	public double withdraw(double amount) {
+		balance = balance -amount;
+		return balance;
+	}
+
+}
+================================
+TestAbsClass
+
+package com.zycus.training.absoluteclass;
+
+public class TestAbsClass {
+
+	public static void main(String[] args) {
+		
+		AbsSaving absSaving = new AbsSaving();
+		absSaving.balance = 5000;
+		absSaving.withdraw(1000);
+		
+		//error : Cannot instantiate the type AbsAccount
+		AbsAccount absAccount = new AbsAccount();
+	}
+
+}
+==============================================
+CatalogItem
+/**
+ * 
+ */
+package com.zycus.training.collections;
+
+/**
+ * @author ankita.sawant
+ * 
+ */
+public class CatalogItem {
+
+	String itemName;
+	int quantity;
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+}
+========================================
+Items
+
+package com.zycus.training.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Items {
+	public List<CatalogItem> catalogItems = new ArrayList<>();
+
+	public List<CatalogItem> getCatalogItems() {
+		return catalogItems;
+	}
+
+	public void setCatalogItems(List<CatalogItem> catalogItems) {
+		this.catalogItems = catalogItems;
+	}
+
+}
+======================================================
+TestCollections
+/**
+ * 
+ */
+package com.zycus.training.collections;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.collections.map.HashedMap;
+
+/**
+ * @author ankita.sawant
+ * 
+ */
+public class TestCollections {
+	public static void main(String[] args) {
+
+		// to create list
+		List<String> list = new ArrayList<>();
+
+		// add elements in list
+		list.add("B");
+		list.add("D");
+		list.add("A");
+		list.add("C");
+
+		// print size of list
+		System.out.println("Size : " + list.size());
+
+		// to remove element from list
+		list.remove("B");
+		System.out.println("Size after removing element : " + list.size());
+
+		// iterator for collection
+		Iterator iterator = list.iterator();
+		while (iterator.hasNext()) {
+			String var = iterator.next().toString();
+			System.out.println(var);
+			if (var.equalsIgnoreCase("A")) {
+				System.out.println("Search successful");
+				break;
+			}
+		}
+		System.out.println("Exit");
+
+		// arraylist : can contain values of any datatype
+		ArrayList list2 = new ArrayList<>();
+		list2.add(2);
+		list2.add("A");
+		list2.add(5.02);
+
+		// to create linked list
+		LinkedList<String> list3 = new LinkedList<>();
+
+		// to create hash map
+		Map<String, String> map = new HashedMap();
+		// to add values in map
+		map.put("Req Name", "REQ_456");
+		map.put("Buyer Name", "ABC");
+		map.put("Settlement Via", "Invoice");
+
+		// to get value from map
+		System.out.println(map.get("Buyer Name"));
+
+		// to print all values of map
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
+
+		// linked hash map
+		LinkedHashMap<String, Integer> map2 = new LinkedHashMap<>();
+		map2.put("First", 1);
+		map2.put("Second", 2);
+		map2.put("Third", 3);
+
+		System.out.println(map2.get("Second"));
+		for (Map.Entry<String, Integer> entry : map2.entrySet()) {
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
+
+		// to create object of catalog item : laptop
+		CatalogItem catalogItem = new CatalogItem();
+		catalogItem.setItemName("Laptop");
+		catalogItem.setQuantity(5);
+
+		// to create object of catalog item : Mobile
+		CatalogItem catalogItem2 = new CatalogItem();
+		catalogItem2.setItemName("Mobile");
+		catalogItem2.setQuantity(10);
+
+		// map of catalog items
+		Map<String, CatalogItem> map3 = new HashedMap();
+		map3.put("Laptop", catalogItem);
+		map3.put("Mobile", catalogItem2);
+
+		// list of catalog items
+		List<CatalogItem> catalogItems = new ArrayList<>();
+		catalogItems.add(catalogItem);
+		catalogItems.add(catalogItem2);
+	}
+
+}
+
+MathException
+
+/**
+ * 
+ */
+package com.zycus.training.exceptionhandling;
+
+/**
+ * @author ankita.sawant
+ *
+ */
+public class MathException extends Exception {
+
+	/**
+	 * 
+	 */
+	public MathException() {
+		System.out.println("Math Exception");
+	}
+
+	/**
+	 * @param message
+	 */
+	public MathException(String message) {
+		super(message);
+        System.out.println("Math Exception : "+message);
+	}
+
+
+}
+===============================================================
+
+package com.zycus.training.exceptionhandling;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestException {
+	public static void main(String[] args) throws MathException {
+
+		//standard way of using try-catch-finally block
+		WebDriver driver = null;
+		try 
+		{
+			driver = new FirefoxDriver();
+			System.out.println("Opening browser");
+			driver.get("www.google.com");
+			System.out.println("Successful");
+		} 
+		catch (Exception e) 
+		{
+			System.out.println("Fail");
+			e.printStackTrace();
+		} 
+		finally 
+		{
+			driver.quit();
+		}
+
+		//example of custom exception
+		Utilities utilities = new Utilities();
+		try 
+		{
+			utilities.divide(5, 0);
+		} 
+		catch (MathException e) 
+		{
+			e.printStackTrace();
+		}
+	}
+}
+==================================================
+Utilities
+
+
+/**
+ * 
+ */
+package com.zycus.training.exceptionhandling;
+
+/**
+ * @author ankita.sawant
+ *
+ */
+public class Utilities {
+
+	public int divide(int no1,int no2) throws MathException
+	{
+		try
+		{
+			int result=0;
+			result = no1/no2;			
+			return result;
+		}
+		catch(ArithmeticException e)
+		{
+			throw new MathException("Math Exception in division of "+no1 +" & "+no2);
+		}
+	}
+}
+
+===========================================================
+Account
+
+/**
+ * 
+ */
+package com.zycus.training.interfaceexample;
+
+/**
+ * @author ankita.sawant
+ *
+ */
+public interface Account {
+	
+	String status_draft="Draft";
+	public double withdraw(double amount);
+	public double deposit(double amount);
+
+}
+==============================================
+Interface Test
+
+package com.zycus.training.interfaceexample;
+
+public class InterfaceTest {
+public static void main(String[] args) {
+	
+    Account account = new SavingAccount();
+	account.withdraw(500);
+	account.deposit(500);
+	
+	//error : because parent class can't access child class attributes
+	System.out.println(account.balance1);
+	
+	SavingAccount account2 = new SavingAccount();
+	account2.setBalance(1000);
+	account.withdraw(100);
+	account.deposit(500);
+}
+}
+
+==========================================
+SavingAccount
+/**
+ * 
+ */
+package com.zycus.training.interfaceexample;
+
+/**
+ * @author ankita.sawant
+ *
+ */
+public class SavingAccount implements Account{
+	double balance=0;
+	@Override
+	public double withdraw(double amount) {
+		balance = balance - amount;
+		return balance;
+	}
+
+	@Override
+	public double deposit(double amount) {
+		balance +=amount;
+		return balance;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	
+	
+
+}
+================================================
+/**
+ * 
+ */
+package com.zycus.training.string;
+
+/**
+ * @author ankita.sawant
+ * 
+ */
+public class TestString {
+	public static void main(String[] args) {
+
+		String string = new String();
+		string = "Good Morning";
+		String str = "Hello, Good Morning";
+		String str2 = "hello ";
+
+		// contains : return true if str contains str2, it considers case while
+		// matching
+		System.out.println(str.contains(str2));
+
+		// returns true if str matches with str2, it ignores cases
+		System.out.println(str.equalsIgnoreCase(str2));
+
+		// returns length of string
+		System.out.println("Length : " + str.length());
+
+		// to findout substring
+		System.out.println("Sub String : " + str.substring(7));
+		System.out.println("Sub String : " + str.substring(7, 11));
+
+		// trim() : Returns a copy of the string, with leading and trailing
+		// whitespace omitted.
+		System.out.println(str2);
+		System.out.println(str2.trim());
+		System.out.println(str2);
+
+		// split : Splits this string around matches of the given regular
+		// expression.
+		String[] temp = str.split(",");
+		System.out.println("1 :" + temp[0]);
+		System.out.println("2 :" + temp[1].trim());
+
+		// replace : Returns a new string resulting from replacing all
+		// occurrences of oldChar in this string with newChar.
+		str = str.replace("Morning", "Afternoon");
+
+		String template = "$PONO$ : $COMCODE$";
+		String pono = null;
+		if (template.contains("$PONO$")) {
+			pono = template.replace("$PONO$", "123");
+		}
+
+		System.out.println("PO No : " + pono);
+	}
+}
+==========================================================
+
+Hub Parallelization:
+Data Provider:
+
+package com.zycus.dataprovider;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import jxl.Sheet;
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+
+
+	public class Dataprovider {
+		public WebDriver driver;
+		public WebDriverWait wait;
+		String appURL = "https://www.linkedin.com/";
+		
+		//Locators
+		private By byEmail = By.id("login-email");
+		private By byPassword = By.id("login-password");
+		private By bySubmit = By.name("submit");
+		private By byError = By.id("global-alert-queue");
+		
+		@BeforeClass
+		public void testSetup() {
+			driver=new FirefoxDriver();
+			driver.manage().window().maximize();
+			wait = new WebDriverWait(driver, 5);
+		}
+		
+
+		@Test(dataProvider="empLogin")
+		public void VerifyInvalidLogin(String userName, String password) {
+			driver.navigate().to(appURL);
+			driver.findElement(byEmail).sendKeys(userName);
+			driver.findElement(byPassword).sendKeys(password);
+			//wait for element to be visible and perform click
+			wait.until(ExpectedConditions.visibilityOfElementLocated(bySubmit));
+			driver.findElement(bySubmit).click();
+			
+			//Check for error message
+			wait.until(ExpectedConditions.presenceOfElementLocated(byError));
+			String actualErrorDisplayed = driver.findElement(byError).getText();
+			String requiredErrorMessage = "Please correct the marked field(s) below.";
+			Assert.assertEquals(requiredErrorMessage, actualErrorDisplayed);
+			
+		}
+		
+		@DataProvider(name="empLogin")
+		public Object[][] loginData() {
+			Object[][] arrayObject = getExcelData("D:/Selenium/Hub_Parallelization/DataProvider.xls","Sheet1");
+			return arrayObject;
+		}
+
+		/**
+		 * @param File Name
+		 * @param Sheet Name
+		 * @return
+		 */
+		public String[][] getExcelData(String fileName, String sheetName) {
+			String[][] arrayExcelData = null;
+			try {
+				FileInputStream fs = new FileInputStream(fileName);
+				Workbook wb = Workbook.getWorkbook(fs);
+				Sheet sh = wb.getSheet(sheetName);
+
+				int totalNoOfCols = sh.getColumns();
+				int totalNoOfRows = sh.getRows();
+				
+				arrayExcelData = new String[totalNoOfRows-1][totalNoOfCols];
+				
+				for (int i= 1 ; i < totalNoOfRows; i++) {
+
+					for (int j=0; j < totalNoOfCols; j++) {
+						arrayExcelData[i-1][j] = sh.getCell(j, i).getContents();
+					}
+
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+				e.printStackTrace();
+			} catch (BiffException e) {
+				e.printStackTrace();
+			}
+			return arrayExcelData;
+		}
+
+	/*	@Test
+		public void tearDown() {
+			driver.quit();
+		}*/
+	}
+
+

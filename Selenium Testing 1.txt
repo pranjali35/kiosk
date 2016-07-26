@@ -1,0 +1,152 @@
+Grid Testing
+
+/**
+ * 
+ */
+package com.zycus.javatraining.grid;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+/**
+ * @author ankita.sawant
+ * 
+ */
+public class GridTesting {
+	WebDriver driver = null;
+	String baseURL = "http://www.google.com";
+	String hubURL = "http://192.168.4.19:4444/wd/hub";
+
+	@Test
+	public void Test1() throws MalformedURLException {
+		WebDriver driver =null;
+		try {
+
+			System.out.println("Inside Test1");
+			driver = getDriver("Firefox", "36.0", hubURL);
+			driver.get(baseURL);
+			try {
+				Thread.sleep(50000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			driver.quit();
+		}
+	}
+
+	@Test
+	public void Test2() throws MalformedURLException {
+		WebDriver driver =null;
+		try {
+			System.out.println("Inside Test2");
+			driver = getDriver("Firefox", "36.0", hubURL);
+			driver.get("http://www.facebook.com");
+			try {
+				Thread.sleep(50000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			driver.quit();
+		}
+	}
+	@Test
+	public void Test4() throws MalformedURLException {
+		WebDriver driver =null;
+		try {
+			System.out.println("Inside Test2");
+			driver = getDriver("Firefox", "36.0", hubURL);
+			driver.get("http://www.facebook.com");
+			try {
+				Thread.sleep(50000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			driver.quit();
+		}
+	}
+	@Test
+	public void Test3() throws MalformedURLException {
+		WebDriver driver =null;
+		try {
+			System.out.println("Inside Test2");
+			driver = getDriver("Firefox", "36.0", hubURL);
+			driver.get("http://www.facebook.com");
+			try {
+				Thread.sleep(50000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			driver.quit();
+		}
+	}
+
+	public WebDriver getDriver(String browser, String version, String hubURL)
+			throws MalformedURLException {
+		WebDriver driver = null;
+		hubURL = "http://192.168.4.19:4444/wd/hub";
+		DesiredCapabilities capabilities = null;
+		if (browser.equalsIgnoreCase("Firefox")) {
+			capabilities = DesiredCapabilities.firefox();
+		}
+
+		// for ie
+		else if (browser.equalsIgnoreCase("IE")) {
+			capabilities = DesiredCapabilities.internetExplorer();
+			capabilities.setCapability("ignoreZoomSetting", true);
+			capabilities.setCapability(CapabilityType.BROWSER_NAME,
+					"internet explorer");
+		}
+
+		// for chrome
+		else if (browser.equalsIgnoreCase("Chrome")) {
+			capabilities = DesiredCapabilities.chrome();
+
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("test-type");
+			options.addArguments("start-maximized");
+			options.addArguments("--no-sandbox");
+			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		}
+
+		capabilities.setPlatform(Platform.WINDOWS);
+		capabilities.setVersion(version);
+		driver = new RemoteWebDriver(new URL(hubURL), capabilities);
+		return driver;
+	}
+
+}
+==========================================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" parallel="methods" thread-count="4">
+  <test name="test1">
+    <classes>
+       <class name="com.zycus.javatraining.grid.GridTesting"/>
+    </classes>
+  </test>
+</suite>
